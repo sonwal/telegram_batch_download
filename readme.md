@@ -108,9 +108,10 @@ The script requires the following file permissions:
    - `resume.json` - Stores download progress (created automatically)
 
 2. **Write access to the download directory**:
-   - The script creates a `download/` folder with permissions `0777`
+   - The script creates a `download/` folder with permissions `0777` (as set in index.php line 42)
    - All media files are downloaded to this directory
    - Ensure the web server or PHP process user has write permissions
+   - **Security Note**: The code uses `0777` which gives write access to all users. For better security, you may want to modify line 42 in `index.php` to use `0755` or `0775` instead, and ensure your PHP process has appropriate ownership
 
 ### Setting Permissions (Linux/Unix)
 
