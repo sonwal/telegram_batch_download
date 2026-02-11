@@ -39,17 +39,8 @@ cd telegram_batch_download
 
 Install the required PHP packages using Composer:
 
-```bash
-# If you don't have composer installed, download it first
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php composer-setup.php
-php -r "unlink('composer-setup.php');"
-
 # Install dependencies
 php composer.phar install
-# OR if composer is globally installed:
-composer install
-```
 
 This will install MadelineProto and all its dependencies in the `vendor/` directory.
 
@@ -184,6 +175,9 @@ You can modify these settings in `index.php`:
 $limit = 50;  // Number of messages to fetch per batch (1-100)
 sleep(3);     // Delay between batches in seconds (to avoid flood limits)
 ```
+
+### Next group/chat download
+You can download media from other groups/chats after first one is finised by using correct $target and removing the file `resume.json`
 
 ## Troubleshooting
 
