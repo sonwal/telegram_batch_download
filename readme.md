@@ -111,7 +111,7 @@ The script requires the following file permissions:
    - The script creates a `download/` folder with permissions `0777` (as set in index.php line 42)
    - All media files are downloaded to this directory
    - Ensure the web server or PHP process user has write permissions
-   - **Security Note**: The code uses `0777` which gives write access to all users. For better security, you may want to modify line 42 in `index.php` to use `0755` or `0775` instead, and ensure your PHP process has appropriate ownership
+   - **Security Note**: The code uses `0777` which gives write access to all users. For better security, you should modify line 42 in `index.php` to use `0750` or `0770` instead (to prevent read access by others), and ensure your PHP process has appropriate ownership
 
 ### Setting Permissions (Linux/Unix)
 
