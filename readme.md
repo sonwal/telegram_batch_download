@@ -40,7 +40,10 @@ cd telegram_batch_download
 Install the required PHP packages using Composer:
 
 # Install dependencies
+
+```bash
 php composer.phar install
+```
 
 This will install MadelineProto and all its dependencies in the `vendor/` directory.
 
